@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APOWAMAS - Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="admin-dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar bg-dark">
+        <div class="sidebar-header text-center py-4">
+            <i class="bi bi-trash3 text-white" style="font-size: 2rem;"></i>
+            <h4 class="text-white mt-2">APOWAMAS</h4>
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="users.html">
+                    <i class="bi bi-people me-2"></i> Manage Users
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="collections.html">
+                    <i class="bi bi-list-check me-2"></i> Collections
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="missed.html">
+                    <i class="bi bi-exclamation-triangle me-2"></i> Missed
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="households.html">
+                    <i class="bi bi-house-door me-2"></i> Households
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sms.html">
+                    <i class="bi bi-chat-left-text me-2"></i> SMS
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="reports.html">
+                    <i class="bi bi-graph-up me-2"></i> Reports
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navigation -->
+        <nav class="top-navbar navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container-fluid">
+                <button class="sidebar-toggle btn btn-link">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="ms-auto d-flex align-items-center">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle d-flex align-items-center text-decoration-none" 
+                           id="userDropdown" data-bs-toggle="dropdown">
+                            <img src="https://via.placeholder.com/40" class="rounded-circle me-2">
+                            <span>Admin User</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i> Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dashboard Content -->
+        <div class="container-fluid py-4">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2 class="mb-0"><i class="bi bi-speedometer2 me-2"></i> Dashboard Overview</h2>
+                    <p class="text-muted">Welcome back! Here's what's happening today.</p>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="row">
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-start border-primary border-4 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <div class="text-xs fw-bold text-primary mb-1">
+                                        Today's Collections
+                                    </div>
+                                    <div class="h5 mb-0 fw-bold">248</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="bi bi-calendar-check fs-1 text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="collections.html" class="text-primary text-decoration-none">
+                                View details <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-start border-success border-4 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <div class="text-xs fw-bold text-success mb-1">
+                                        Completed
+                                    </div>
+                                    <div class="h5 mb-0 fw-bold">218</div>
+                                    <div class="mt-2">
+                                        <span class="badge bg-success bg-opacity-10 text-success">
+                                            <i class="bi bi-arrow-up"></i> 87.9%
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="bi bi-check-circle fs-1 text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-start border-warning border-4 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <div class="text-xs fw-bold text-warning mb-1">
+                                        Missed Collections
+                                    </div>
+                                    <div class="h5 mb-0 fw-bold">30</div>
+                                    <div class="mt-2">
+                                        <span class="badge bg-warning bg-opacity-10 text-warning">
+                                            <i class="bi bi-arrow-down"></i> 12.1%
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="bi bi-exclamation-triangle fs-1 text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="missed.html" class="text-warning text-decoration-none">
+                                Take action <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-start border-info border-4 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <div class="text-xs fw-bold text-info mb-1">
+                                        Active Collectors
+                                    </div>
+                                    <div class="h5 mb-0 fw-bold">12</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="bi bi-people fs-1 text-info"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="users.html" class="text-info text-decoration-none">
+                                Manage users <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity and Charts -->
+            <div class="row">
+                <!-- Recent Collections -->
+                <div class="col-lg-8 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0"><i class="bi bi-clock-history me-2"></i> Recent Collections</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Time</th>
+                                            <th>House</th>
+                                            <th>Collector</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10:15 AM</td>
+                                            <td>#42 (Zone A)</td>
+                                            <td>John M.</td>
+                                            <td><span class="badge bg-success">Collected</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- More rows would be dynamically loaded -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="collections.html" class="btn btn-sm btn-outline-primary">
+                                View All Collections
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Chart -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0"><i class="bi bi-bar-chart me-2"></i> Weekly Performance</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container" style="height: 250px;">
+                                <!-- Chart placeholder - would be replaced with Chart.js -->
+                                <div class="d-flex justify-content-center align-items-center h-100 text-muted">
+                                    <div class="text-center">
+                                        <i class="bi bi-bar-chart" style="font-size: 3rem;"></i>
+                                        <p>Performance chart will appear here</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">This Week</span>
+                                    <strong>87.9% Success</strong>
+                                </div>
+                                <div class="progress mt-2" style="height: 8px;">
+                                    <div class="progress-bar bg-success" style="width: 87.9%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toggle sidebar
+        document.querySelector('.sidebar-toggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        });
+    </script>
+</body>
+</html>
